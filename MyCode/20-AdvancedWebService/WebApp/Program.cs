@@ -13,7 +13,7 @@ builder.Services.AddDbContext<DataContext>(opts => {
 });
 
 builder.Services.AddControllers()
-    .AddNewtonsoftJson().AddXmlDataContractSerializerFormatters();
+    .AddNewtonsoftJson();//.AddXmlDataContractSerializerFormatters();
 
 builder.Services.AddRateLimiter(opts => {
     opts.AddFixedWindowLimiter("fixedWindow", fixOpts => {
